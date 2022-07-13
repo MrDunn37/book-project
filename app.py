@@ -109,7 +109,9 @@ def app():
             time.sleep(1.5)#pause program for 1.5 seconds before moving on
             
         elif choice == '2':
-            pass
+            for book in session.query(Book):
+                print(f'{book.id} | {book.title} | {book.author}')
+            input('\nPress enter to return to the main menu. ')
         elif choice == '3':
             pass
         elif choice == '4':
